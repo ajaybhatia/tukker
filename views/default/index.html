@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<title>Microposts On Steroids</title>
-		{{response.files.append(URL('static', 'css/skelton.css'))}}
+		{{
+		response.files.append(URL('static', 'css/skelton.css'))
+		response.files.append(URL('static', 'css/custom.css')) <!-- Add this line. -->		
+		}}
 		{{include 'web2py_ajax.html'}}	
 	</head>
 	<body>
