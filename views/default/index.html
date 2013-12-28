@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>Microposts On Steroids</title>
+		{{response.files.append(URL('static', 'css/skelton.css'))}}
+		{{include 'web2py_ajax.html'}}	
 	</head>
 	<body>
 		<h1>Messages With 300 Chars</h1>
