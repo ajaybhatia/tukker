@@ -65,7 +65,7 @@ def data():
     """
     return dict(form=crud())
 
-def privacy():
+def privacy():	
     return dict()
 
 def about():
