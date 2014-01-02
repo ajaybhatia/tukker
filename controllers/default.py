@@ -27,6 +27,8 @@ def user():
         @auth.requires_permission('read','table name',record_id)
     to decorate functions that need access control
     """
+    if request.args[0] == 'register':
+        response.title = "Tukker.Me Registration"
     return dict(form=auth())
 
 
