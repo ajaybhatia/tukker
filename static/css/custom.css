@@ -10,3 +10,25 @@ header h1 {
 	padding: 0 0 0 5px;
 	margin-right: 197px;
 }
+
+a, a:visited {
+	color: #009BC2
+}
+
+#register-button {margin: 110px 0 0 10px;}
+
+header.container, footer.container {padding: 20px;}
+
+body {
+	background-color: #abcdef;
+}
+
+.container {
+	background-color: #ffffff;
+}
+
+body > section.container {
+	padding: 0 20px;
+}
+
+.w2p_fw {padding: 5px;}
