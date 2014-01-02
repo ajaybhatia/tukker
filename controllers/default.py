@@ -67,7 +67,19 @@ def data():
     """
     return dict(form=crud())
 
-def privacy():	
+def profile():
+    nickname = request.args[0]
+ 
+    response.title = nickname + "'s Profile"
+
+    result = db(db.auth_user.nickname == nickname).select()[0]
+
+    name = result.first_name + " " + result.last_name
+    image = result.image
+
+    return dict(nickname=nickname, name=name, image=image)
+
+def privacy():
     return dict()
 
 def about():
