@@ -1,50 +1,12 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Microposts On Steroids</title>
-		{{
-		response.files.append(URL('static','css/skeleton.css'))
-		response.files.append(URL('static', 'css/superfish.css'))
-		response.files.append(URL('static', 'css/custom.css'))		
-		}}
-		{{include 'web2py_ajax.html'}}	
-	</head>
-	<body>
-		<header class="container">
-			<div class="six columns alpha">
-				<h1>Tukker.me</h1>
-			</div>
-			<div class="ten columns omega">
-				<nav>
-					<ul class="sf-menu">
-						<li><a href="{{=URL(c="default", f="index")}}">Home</a></li>
-						<li><a href="{{=URL(c="default", f="help")}}">Help</a></li>
-						<li><a href="{{=URL(c="default", f="user")}}">Login</a></li>
-						<li><a href="{{=URL(c="default", f="privacy")}}">Privacy</a></li>
-					</ul>
-				</nav>			
-			</div>
-		</header>
-		<section>
-			<div class="six columns alpha">
-				<h1>Messages With 300 Chars</h1>
-				<p>
-					Welcome to <strong>Tukker.Me</strong>, the new way to 
-					tell your friends and the world what you are thinking.
-				</p>	
-			</div>
-			<div class="ten columns omega">
-				<a id="register-button" href="{{=URL(c="default", f="user", args="regsiter")}}" class="button">Register</a>
-			</div>
-		</section>
-		<footer class="container">
-			<nav class="sixteen columns alpha omega">
-				<a href="{{=URL(c="default", f="about")}}">About</a>
-				 · 
-				<a href="{{=URL(c="default", f="terms")}}">Terms</a>
-				 · 
-				<a href="{{=URL(c="default", f="contact")}}">Contact</a>
-			</nav>
-		</footer>
-	</body>
-</html>
+{{extend 'layout.html'}}
+<div class="six columns alpha">
+	<h1>Messages With 300 Chars</h1>
+	<p>
+		Welcome to <strong>Tukker.Me</strong>, the new way to 
+		tell your friends and the world what you are thinking.
+	</p>	
+</div>
+<div class="ten columns omega">
+	<a id="register-button" href="{{=URL(c="default", f="user", args="regsiter")}}" class="button">Register</a>
+</div>
+
