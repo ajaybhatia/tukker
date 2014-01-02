@@ -16,13 +16,11 @@
 			</div>
 			<div class="ten columns omega">
 				<nav>
-					<ul>
-						<div class="sf-menu">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Help</a></li>
-							<li><a href="#">Login</a></li>
-							<li><a href="#">Privacy</a></li>
-						</div>
+					<ul class="sf-menu">
+						<li><a href="{{=URL(c="default", f="index")}}">Home</a></li>
+						<li><a href="{{=URL(c="default", f="help")}}">Help</a></li>
+						<li><a href="{{=URL(c="default", f="user")}}">Login</a></li>
+						<li><a href="{{=URL(c="default", f="privacy")}}">Privacy</a></li>
 					</ul>
 				</nav>			
 			</div>
@@ -36,16 +34,16 @@
 				</p>	
 			</div>
 			<div class="ten columns omega">
-				<a id="register-button" href="#" class="button">Register</a>
+				<a id="register-button" href="{{=URL(c="default", f="user", args="regsiter")}}" class="button">Register</a>
 			</div>
 		</section>
 		<footer class="container">
 			<nav class="sixteen columns alpha omega">
-				<a href="#">About</a>
+				<a href="{{=URL(c="default", f="about")}}">About</a>
 				 · 
-				<a href="#">Terms</a>
+				<a href="{{=URL(c="default", f="terms")}}">Terms</a>
 				 · 
-				<a href="#">Contact</a>
+				<a href="{{=URL(c="default", f="contact")}}">Contact</a>
 			</nav>
 		</footer>
 	</body>
