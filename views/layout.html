@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Microposts On Steroids</title>
+		<title>{{=response.title or request.application}}</title>
 		{{
 		response.files.append(URL('static','css/skeleton.css'))
 		response.files.append(URL('static', 'css/superfish.css'))
@@ -16,19 +16,12 @@
 			</div>
 			<div class="ten columns omega">
 				<nav>
-					<ul class="sf-menu">
-						<li><a href="{{=URL(c="default", f="index")}}">Home</a></li>
-						<li><a href="{{=URL(c="default", f="help")}}">Help</a></li>
-						<li><a href="{{=URL(c="default", f="user")}}">Login</a></li>
-						<li><a href="{{=URL(c="default", f="privacy")}}">Privacy</a></li>
-					</ul>
-				</nav>			
-			</div>
+        			{{=MENU(response.menu, _class='sf-menu')}}
+      			</nav>
+    		</div>
 		</header>
-		<section>
-			<div class="main">
-				{{include}}	
-			</div>
+		<section id="main" class="container">
+    		<div class="flash">{{=response.flash or ''}}</div>
 		</section>
 		<footer class="container">
 			<nav class="sixteen columns alpha omega">
